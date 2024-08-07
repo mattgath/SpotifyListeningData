@@ -12,33 +12,13 @@ matplotlib library
 json library (part of Python standard library)
 
 
-Code Overview
+# Code Overview
 addSongs(data, fileName): Aggregates song play counts and durations from the provided data based on the file name.
-newFile(fileName): Opens a JSON file, reads its contents, and calls addSongs to add the data to the main dictionary.
+newFile(fileName): Opens a JSON file, reads its contents, and calls and songs to add the data to the main dictionary.
 displayBarGraph(): Filters and sorts the aggregated data, then generates and displays a bar graph showing the number of times each track was listened to.
-Example
 
-import json
-import matplotlib.pyplot as plt
-
-def addSongs(data, fileName):
-    # Implementation here
-
-def newFile(fileName):
-    # Implementation here
-
-def displayBarGraph():
-    # Implementation here
-
-uniqueSongList = {}
-newFile('Audio-2023_4.json')
-newFile('Audio-2017-2019.json')
-newFile('Audio-2022-2023.json')
-newFile('Audio-2020-2022.json')
-newFile('Audio-2019-2020.json')
-newFile('StreamingHistory0.json')
-newFile('StreamingHistory1.json')
-displayBarGraph()
+# Issues Overcame
+There were issues with the JSON files containing my decrypted IP address that I had to write a separate program to remove. Additionally, graph spacing has been an issue while working on the project, which is why there is a minimum amount of time I listened to make the graph.
 
 Author
 Matthew Gathman
