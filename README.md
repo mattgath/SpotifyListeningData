@@ -10,43 +10,14 @@ Filtering: Allows filtering of tracks based on the minimum number of listens.
 Python 3.x
 matplotlib library
 json library (part of Python standard library)
-# Installation
-Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/yourusername/spotify-listening-history-analyzer.git
-Navigate to the project directory:
-
-bash
-Copy code
-cd spotify-listening-history-analyzer
-Install the required libraries:
-
-bash
-Copy code
-pip install matplotlib
-Usage
-Place your JSON files containing Spotify streaming history in the project directory. Supported files include:
-
-Audio-YYYY_MM.json (or similar)
-StreamingHistoryX.json
-Modify the newFile function calls in the script to include the paths to your JSON files.
-
-Run the script:
-
-bash
-Copy code
-python your_script_name.py
-This will process the JSON files, aggregate the data, and display a bar graph of the number of times each track was listened to.
 
 Code Overview
 addSongs(data, fileName): Aggregates song play counts and durations from the provided data based on the file name.
 newFile(fileName): Opens a JSON file, reads its contents, and calls addSongs to add the data to the main dictionary.
 displayBarGraph(): Filters and sorts the aggregated data, then generates and displays a bar graph showing the number of times each track was listened to.
 Example
-python
-Copy code
+
 import json
 import matplotlib.pyplot as plt
 
@@ -68,8 +39,6 @@ newFile('Audio-2019-2020.json')
 newFile('StreamingHistory0.json')
 newFile('StreamingHistory1.json')
 displayBarGraph()
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 Author
 Matthew Gathman
